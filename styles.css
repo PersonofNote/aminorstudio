@@ -6,19 +6,18 @@ body {
 .section-title {
   width: 50%;
   margin: auto;
+  text-align: center;
   margin-bottom: 1rem;
 }
 
 /*Resume section*/
 
 .container-resume {
-  height: 100vh;
-  padding-top:1rem;
+ transform: translate(0,100px);
 }
 
 .card-resume {
   width: 90%;
-  font-size: small;
   font-size: calc(6px + 0.5vw);
   line-height: calc(0.8em + 0.2vw);
 }
@@ -45,6 +44,10 @@ body {
   height: 100%;
   text-align: justify;
   min-width: 600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 #projects-container:after {
@@ -57,7 +60,7 @@ body {
   border: 2px solid #9eaeb3;
   border-radius: 4px;
   box-shadow: 2px 2px lightgrey;
-  width: 20rem;
+  width: 22rem;
   height: 28rem;
   margin: 2rem;
   margin-bottom: 1rem;
@@ -160,7 +163,7 @@ body {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .container-resume {
-    height: 100vh;
+    
   }
 
   #resume-header {
@@ -169,8 +172,10 @@ body {
 
   .card-resume {
     width: 100%;
-    /* In progress dynamic resume sizing to fit different screens correctly*/
-    height: 100%;
+  }
+
+  #projects-container {
+    flex-direction: column;
   }
 }
 
@@ -188,8 +193,6 @@ body {
 @media (max-width: 1199.98px) {
   .card-resume {
     width: 100%;
-    /* In progress dynamic resume sizing to fit different screens correctly*/
-    height: 100vh;
   }
   .project {
     margin: 1rem;
