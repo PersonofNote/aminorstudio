@@ -10,6 +10,26 @@ body {
   margin-bottom: 1rem;
 }
 
+.portrait {
+  transition-duration: 0.5s;
+  height: 250px;
+  width: 250px;
+  margin: auto;
+  margin-top: 14rem;
+  background-size: cover;
+  border-radius: 180px;
+  background-repeat: no-repeat;
+  background: url('./assets/self-portrait-1.png');
+  background-position: center;
+}
+
+.portrait:hover {
+  transition-duration: 0.5s;
+  background: url('./assets/self-portrait-photo.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /*Resume section*/
 
 .container-resume {
@@ -47,7 +67,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 #projects-container:after {
@@ -165,6 +185,9 @@ body {
   .container-resume {
     
   }
+  .project {
+    width: 100%;
+  }
 
   #resume-header {
     font-size: small;
@@ -176,6 +199,10 @@ body {
 
   #projects-container {
     flex-direction: column;
+  }
+  .project {
+    width: 28rem;
+    height: 34rem;
   }
 }
 
